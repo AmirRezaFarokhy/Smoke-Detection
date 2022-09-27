@@ -3,7 +3,7 @@ It is very important to detect people smoking in places where smoking is prohibi
 
 ## Data 
 Because the data is confidential, we have not uploaded it here. And this is the data that you can download and use for practice:
-[a link](https://paperswithcode.com/dataset/ucf101)
+[USF-101 DataSets](https://paperswithcode.com/dataset/ucf101)
 
 ### Requirements
 Running `Smoke-Detection` requires:
