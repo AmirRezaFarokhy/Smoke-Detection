@@ -10,7 +10,6 @@ Running `Smoke-Detection` requires:
 * Python 3.8 (tested under Python 3.10.4)
 * Using Google Colab GPU
 * numpy 1.22.3
-* pandas 1.4.2
 * cv2 4.6.0
 
 ### Installation
@@ -18,8 +17,6 @@ In order to test the script please run the following commands:
 ```sh
 # install numpy
 pip install numpy
-# install pandas
-pip install pandas
 # install cv2
 pip install opencv-python
 ```
