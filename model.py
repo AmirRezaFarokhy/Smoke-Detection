@@ -20,6 +20,40 @@ with open(path_labels, "rb") as f:
 	y = pickle.load(f)
 	y = np.array(y)
 	f.close()
+	
+def accuracy_each_group(y_true, y_pred):
+	
+    def func(data):
+        y_index = [i for i in range(6)]
+        cnt = 0
+        y_tru = []
+        for i in range(6):
+            lst = []
+            for j in data:
+                if j==y_index[i]:
+                    lst.append(j)
+
+            y_tru.append(lst)
+    
+    	return y_tru
+
+    actual = func(y_true)
+    predict = func(y_pred)
+    all_lst_names = ["ApplyEyeMakeup", 
+                     "ApplyLipstick",
+                     "BrushingTeeth",
+                     "BlowDryHair",
+                     "WalkingWithDog",
+                     "smoking"]
+    
+    cnt = 0
+    for ac, pre in zip(actual, predict):
+        length_max = max(len(ac), len(pre))
+        length_min = min(len(ac), len(pre)) 
+        accuracy = length_min/length_max
+        print(f"this {all_lst_names[cnt]} group accuracy is {accuracy}")
+        cnt += 1
+    
 
 x_train, x_valid, y_train, y_valid_cn = train_test_split(X, y, test_size=0.2)
 
@@ -100,41 +134,6 @@ y_pred = model.predict(x_valid)
 y_pred_class = []
 for i in y_pred:
     y_pred_class.append(np.argmax(i))
-
-
-def accuracy_each_group(y_true, y_pred):
-	
-    def func(data):
-        y_index = [i for i in range(6)]
-        cnt = 0
-        y_tru = []
-        for i in range(6):
-            lst = []
-            for j in data:
-                if j==y_index[i]:
-                    lst.append(j)
-
-            y_tru.append(lst)
-    
-    	return y_tru
-
-    actual = func(y_true)
-    predict = func(y_pred)
-    all_lst_names = ["ApplyEyeMakeup", 
-                     "ApplyLipstick",
-                     "BrushingTeeth",
-                     "BlowDryHair",
-                     "WalkingWithDog",
-                     "smoking"]
-    
-    cnt = 0
-    for ac, pre in zip(actual, predict):
-        length_max = max(len(ac), len(pre))
-        length_min = min(len(ac), len(pre)) 
-        accuracy = length_min/length_max
-        print(f"this {all_lst_names[cnt]} group accuracy is {accuracy}")
-        cnt += 1
-    
 
 accuracy_each_group(y_valid_cn, y_pred_class)
 
