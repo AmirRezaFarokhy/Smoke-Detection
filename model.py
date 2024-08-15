@@ -42,6 +42,7 @@ def accuracy_each_group(y_true, y_pred):
 
     actual = func(y_true)
     predict = func(y_pred)
+    # name of classes
     all_lst_names = ["ApplyEyeMakeup", 
                      "ApplyLipstick",
                      "BrushingTeeth",
