@@ -13,6 +13,7 @@ Running `Smoke-Detection` requires:
 * numpy 1.22.3
 * cv2 4.6.0
 
+
 ### Installation
 In order to test the script please run the following commands:
 ```sh
