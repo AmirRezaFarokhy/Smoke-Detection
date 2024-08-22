@@ -65,7 +65,6 @@ def show_samples(X_frames):
 
 	plt.show()
 
-
 all_dataset, y = take_video_give_data(path_train, sizes=(IMG_SIZE_1, IMG_SIZE_0))
 all_dataset = select_frames(all_dataset, n=10)
 print(f"Shape of features is {all_dataset.shape}")
