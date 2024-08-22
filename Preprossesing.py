@@ -41,7 +41,6 @@ def take_video_give_data(data_path, sizes=(50,50)):
 
 			except Exception as e:
 				print(e)
-
 	return data, y
 
 
