@@ -138,5 +138,3 @@ for i in y_pred:
     y_pred_class.append(np.argmax(i))
 
 accuracy_each_group(y_valid_cn, y_pred_class)
-
-
