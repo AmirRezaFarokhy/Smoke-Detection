@@ -8,7 +8,6 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.regularizers import l2
 
-
 # Using Google Colab GPU's, all Data send to google deive and loaded here...
 path_features = "/content/drive/MyDrive/YOURFILEPATH.pickle" # put your file path
 path_labels = "/content/drive/MyDrive/YOURFILEPATH.pickle"
