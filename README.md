@@ -26,4 +26,3 @@ pip install opencv-python
 A summary of explanations about libraries:
 * The `numpy` it makes it easy to do math and work with matrices.
 * The `opencv-python` Python  library helps to Working with Image and Videos data.
-
