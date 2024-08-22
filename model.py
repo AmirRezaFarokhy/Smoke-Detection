@@ -20,7 +20,6 @@ with open(path_labels, "rb") as f:
 	y = pickle.load(f)
 	y = np.array(y)
 	f.close()
-	
 
 # Check accuracy for each group
 def accuracy_each_group(y_true, y_pred):
