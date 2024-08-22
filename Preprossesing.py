@@ -43,7 +43,7 @@ def take_video_give_data(data_path, sizes=(50,50)):
 				print(e)
 	return data, y
 
-
+# Select Frames
 def select_frames(frames_arr, n=20):
 	videos=[]
 	for i in range(len(frames_arr)):
