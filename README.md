@@ -6,6 +6,7 @@ It is very important to detect people smoking in places where smoking is prohibi
 Because the data is confidential, we have not uploaded it here. And this is the data that you can download and use for practice:
 [USF-101 DataSets](https://paperswithcode.com/dataset/ucf101)
 
+
 ### Requirements
 Running `Smoke-Detection` requires:
 * Python 3.8 (tested under Python 3.10.4)
